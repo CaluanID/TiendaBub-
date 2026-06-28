@@ -1,0 +1,996 @@
+// Configuración Global de la Tienda
+const STORE_CONFIG = {
+  storeName: "Ombú Ropa de Trabajo (Reseller)",
+  whatsappNumber: "5491157003273", // Número destino sin espacios ni símbolos
+  currency: "$",
+  whatsappGreeting: "¡Hola! Quisiera consultar/hacer un pedido para los siguientes artículos de trabajo:",
+};
+
+// Catálogo de Productos
+const PRODUCT_CATALOG = [
+  // --- INDUMENTARIA OMBÚ ---
+  {
+    id: "55000",
+    name: "Pantalón Ombú Clásico",
+    category: "Indumentaria Ombú",
+    description: "Pantalón de trabajo Ombú clásico, confeccionado en tela resistente. Cuenta con botón y cierre para acceso, bolsillos delanteros y traseros plaque.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azulino", code: "#3a75c4" },
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" },
+      { name: "Blanco", code: "#ffffff" },
+      { name: "Verde Oliva", code: "#556b2f" }
+    ],
+    features: [
+      "Botón y cierre metálico para acceso a la prenda.",
+      "Dos bolsillos traseros plaque.",
+      "Dos bolsillos delanteros profundos."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Cintura", "Cadera", "Largo de Pierna", "Largo Total"],
+      rows: [
+        ["40", "40 cm", "51 cm", "82 cm", "107,5 cm"],
+        ["42", "42 cm", "53 cm", "82 cm", "108 cm"],
+        ["44", "44 cm", "55 cm", "82 cm", "108,5 cm"],
+        ["46", "46 cm", "57 cm", "82 cm", "109 cm"],
+        ["48", "48 cm", "59 cm", "82 cm", "109,5 cm"],
+        ["50", "50 cm", "61 cm", "82 cm", "110 cm"],
+        ["52", "52 cm", "63 cm", "83 cm", "110,5 cm"],
+        ["54", "54 cm", "65 cm", "83 cm", "111 cm"]
+      ]
+    }
+  },
+  {
+    id: "55909",
+    name: "Camisa con Reflectivos Ombú",
+    category: "Indumentaria Ombú",
+    description: "Camisa de trabajo de alta visibilidad con tiras reflectivas reglamentarias. Ideal para trabajos viales y nocturnos.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "Cartera con botones central para acceso a la prenda.",
+      "Bolsillos delanteros con botón de acceso.",
+      "Puño ajustable con botón y ojal.",
+      "Tiras reflectivas reglamentarias en pecho, espalda y mangas."
+    ],
+    sizeGuide: {
+      headers: ["Talle etiqueta", "Equiv.", "Ancho Pecho", "Ancho Hombro", "Largo", "Largo Manga"],
+      rows: [
+        ["38", "XS", "60 cm", "47 cm", "78 cm", "63 cm"],
+        ["40", "S", "62 cm", "49 cm", "79 cm", "63,5 cm"],
+        ["42", "M", "64 cm", "51 cm", "79 cm", "63,5 cm"],
+        ["44", "L", "66 cm", "53 cm", "79 cm", "64 cm"],
+        ["46", "XL", "68 cm", "55 cm", "80 cm", "64,5 cm"],
+        ["48", "XL", "71 cm", "57 cm", "80 cm", "64 cm"],
+        ["50", "2XL", "74 cm", "59 cm", "80 cm", "65 cm"],
+        ["52", "2XL", "77 cm", "61 cm", "81 cm", "65 cm"],
+        ["54", "3XL", "80 cm", "63 cm", "81,5 cm", "65,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "55500",
+    name: "Camisa Ombú 100% Algodón",
+    category: "Indumentaria Ombú",
+    description: "Camisa clásica de trabajo confeccionada en gabardina de puro algodón para máxima comodidad y respirabilidad.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54"],
+    colores: [
+      { name: "Azulino", code: "#3a75c4" },
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" },
+      { name: "Blanco", code: "#ffffff" },
+      { name: "Verde Oliva", code: "#556b2f" }
+    ],
+    features: [
+      "Tejido 100% algodón resistente.",
+      "Cartera central con botones.",
+      "Dos bolsillos delanteros plaque.",
+      "Puños con botón ajustable."
+    ],
+    sizeGuide: {
+      headers: ["Talle etiqueta", "Equiv.", "Ancho Pecho", "Ancho Hombro", "Largo", "Largo Manga"],
+      rows: [
+        ["38", "XS", "60 cm", "47 cm", "78 cm", "63 cm"],
+        ["40", "S", "62 cm", "49 cm", "79 cm", "63,5 cm"],
+        ["42", "M", "64 cm", "51 cm", "79 cm", "63,5 cm"],
+        ["44", "L", "66 cm", "53 cm", "79 cm", "64 cm"],
+        ["46", "XL", "68 cm", "55 cm", "80 cm", "64,5 cm"],
+        ["48", "XL", "71 cm", "57 cm", "80 cm", "64 cm"],
+        ["50", "2XL", "74 cm", "59 cm", "80 cm", "65 cm"],
+        ["52", "2XL", "77 cm", "61 cm", "81 cm", "65 cm"],
+        ["54", "3XL", "80 cm", "63 cm", "81,5 cm", "65,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "55502",
+    name: "Chomba Ombú Gabardina Liviana",
+    category: "Indumentaria Ombú",
+    description: "Chomba tipo polo premium. Confeccionada en tejido de gabardina liviana de algodón con laterales elásticos para mayor ventilación y movilidad.",
+    talles: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Gris", code: "#808080" }
+    ],
+    features: [
+      "Cuello tipo polo con botones.",
+      "Termofusionado reflectivo en mangas.",
+      "Confeccionada en gabardina liviana 100% algodón.",
+      "Morley en los laterales para mayor movilidad y respiración."
+    ],
+    sizeGuide: {
+      headers: ["Medida", "XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Ancho Sisa (A)", "50 cm", "52 cm", "54 cm", "56 cm", "58 cm", "60 cm", "62 cm"],
+        ["Largo (B)", "69 cm", "71 cm", "73 cm", "75 cm", "77 cm", "79 cm", "81 cm"],
+        ["Hombros (C)", "43 cm", "45 cm", "47 cm", "49 cm", "51 cm", "53 cm", "55 cm"],
+        ["Manga (D)", "19,5 cm", "20 cm", "20,5 cm", "21 cm", "21,5 cm", "22 cm", "22,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "55912",
+    name: "Pantalón Cargo con Bolsillo Celular",
+    category: "Indumentaria Ombú",
+    description: "Pantalón cargo de alta resistencia con multibolsillos, incluyendo un bolsillo porta-celular dedicado. Ideal para tareas logísticas y de campo.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "Bolsillo portacelular de acceso rápido.",
+      "Bolsillos laterales con fuelle y abrojo velcro.",
+      "Bolsillos traseros plaque con tapa.",
+      "Cintura con pasacinto y bragueta con cremallera."
+    ],
+    sizeGuide: {
+      headers: ["Medida / Talle", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+      rows: [
+        ["Cintura (A)", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58"],
+        ["Largo Total (B)", "109", "109", "109", "110", "110", "110", "111", "111", "111", "112", "112", "112"],
+        ["Largo Entrepierna", "84", "84", "84", "84", "84", "84", "84", "84", "84", "84", "84", "84"]
+      ]
+    }
+  },
+  {
+    id: "55908",
+    name: "Pantalón con Reflectivos Ombú",
+    category: "Indumentaria Ombú",
+    description: "Pantalón de trabajo reglamentario con bandas reflectivas en las piernas. Cintura clásica con pasacinto.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60", "62", "64", "66", "68"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "Bandas reflectivas en botamangas.",
+      "Botón metálico de acceso.",
+      "Bolsillos traseros tipo ojal con botón.",
+      "Bolsillos delanteros profundos."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Cintura", "Cadera", "Largo de Pierna", "Largo Total"],
+      rows: [
+        ["40", "40 cm", "51 cm", "82 cm", "107,5 cm"],
+        ["42", "42 cm", "53 cm", "82 cm", "108 cm"],
+        ["44", "44 cm", "55 cm", "82 cm", "108,5 cm"],
+        ["46", "46 cm", "57 cm", "82 cm", "109 cm"],
+        ["48", "48 cm", "59 cm", "82 cm", "109,5 cm"],
+        ["50", "50 cm", "61 cm", "82 cm", "110 cm"],
+        ["52", "52 cm", "63 cm", "83 cm", "110,5 cm"],
+        ["54", "54 cm", "65 cm", "83 cm", "111 cm"]
+      ]
+    }
+  },
+  {
+    id: "55004-10",
+    name: "Pantalón Cargo Strauss Elastizado",
+    category: "Indumentaria Ombú",
+    description: "Línea premium Strauss. Elaborado en tejido sarga work stretch ultra resistente y cómodo con ventilación lateral y bandas reflectivas.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60", "62", "64", "66", "68"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Tejido sarga work stretch microesmerilado (98% algodón, 2% elastano).",
+      "Bolsillo lateral porta-objetos y un bolsillo cargo amplio con tapa.",
+      "Bandas reflectivas integradas.",
+      "Zonas de respiración lateral."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Cintura (aprox)", "Largo de Pierna", "Largo Total"],
+      rows: [
+        ["40", "40 cm", "82 cm", "108 cm"],
+        ["42", "42 cm", "82 cm", "108 cm"],
+        ["44", "44 cm", "82 cm", "109 cm"],
+        ["46", "46 cm", "82 cm", "109 cm"],
+        ["48", "48 cm", "82 cm", "110 cm"],
+        ["50", "50 cm", "82 cm", "110 cm"]
+      ]
+    }
+  },
+  {
+    id: "58062",
+    name: "Bombacha de Campo Ombú",
+    category: "Indumentaria Ombú",
+    description: "Bombacha de campo tradicional de alta durabilidad. Perfecta para tareas rurales y uso diario al aire libre.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Verde Oliva", code: "#556b2f" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "Bolsillos traseros con traba a botón.",
+      "Cintura con pasacintos reforzados.",
+      "Pinzas clásicas de bombacha de campo."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Cintura (A)", "Largo Total (B)", "Tiro Del. (C)", "Largo Entrep. (F)"],
+      rows: [
+        ["38", "36 cm", "101 cm", "31 cm", "73 cm"],
+        ["40", "38 cm", "101 cm", "31 cm", "73 cm"],
+        ["42", "40 cm", "101 cm", "31 cm", "73 cm"],
+        ["44", "42 cm", "102 cm", "32 cm", "74 cm"],
+        ["46", "44 cm", "103 cm", "32 cm", "74 cm"],
+        ["48", "46 cm", "103 cm", "32 cm", "74 cm"],
+        ["50", "48 cm", "104 cm", "33 cm", "74 cm"],
+        ["52", "50 cm", "105 cm", "34 cm", "74 cm"],
+        ["54", "51 cm", "105 cm", "35 cm", "74,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "68077",
+    name: "Faja Lumbar de Seguridad",
+    category: "Indumentaria Ombú",
+    description: "Faja lumbar ergonómica para protección en levantamiento de cargas. Previene lesiones y mejora la postura del operario.",
+    talles: ["S", "M", "L", "XL", "2XL"],
+    colores: [
+      { name: "Negro", code: "#000000" }
+    ],
+    features: [
+      "Tiradores elásticos regulables y malla elastizada transpirable.",
+      "Bandas laterales de doble ajuste regulable.",
+      "Ballenas con cinta antideslizante interna.",
+      "Velcro de alta resistencia y durabilidad."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "55904",
+    name: "Capa de Lluvia Impermeable",
+    category: "Indumentaria Ombú",
+    description: "Capa de lluvia fabricada en poliéster con recubrimiento de PVC de 32 micrones. Totalmente impermeable y reforzada.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Amarillo", code: "#ffd700" }
+    ],
+    features: [
+      "Costuras cosidas y selladas térmicamente.",
+      "Capucha desmontable con cordón de ajuste.",
+      "Bolsillos delanteros con solapa anti-agua.",
+      "Acceso rápido con botones a presión."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Pecho (A)", "130 cm", "132 cm", "137 cm", "142 cm", "142 cm", "152 cm"],
+        ["Largo Manga (B)", "78 cm", "80 cm", "82 cm", "83 cm", "85 cm", "87 cm"],
+        ["Largo Total (C)", "90 cm", "90 cm", "90 cm", "90 cm", "90 cm", "90 cm"]
+      ]
+    }
+  },
+  {
+    id: "55905",
+    name: "Traje Ejecutivo de Agua (Conjunto)",
+    category: "Indumentaria Ombú",
+    description: "Conjunto impermeable de chaqueta y pantalón. Textura suave, liviana y altamente protectora contra lluvias copiosas.",
+    talles: ["M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Chaqueta con capucha fija incorporada al cuello.",
+      "Ventilación pasiva en axilas y espalda.",
+      "Pantalón con elástico cómodo en la cintura.",
+      "Doble ajuste en puño (elástico y abrojo) y botamanga con broche."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "55070",
+    name: "Medias Térmicas de Lana Ombú",
+    category: "Indumentaria Ombú",
+    description: "Medias térmicas de caña alta confeccionadas con lana acrílica y spandex. Ideales para zonas frías o uso con calzado de seguridad.",
+    talles: ["M (36-39)", "L (40-42)", "XL (43-46)"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Gris", code: "#808080" }
+    ],
+    features: [
+      "Composición: 80% lana acrílica, 15% spandex, 5% poliamida.",
+      "Puño antideslizante y costura invisible en puntera.",
+      "Talón y puntera reforzados con planta soft acolchada."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Equivalencia de Calzado"],
+      rows: [
+        ["M", "36 al 39"],
+        ["L", "40 al 42"],
+        ["XL", "43 al 46"]
+      ]
+    }
+  },
+  {
+    id: "55071",
+    name: "Plantilla Ergonómica Confort P.U.",
+    category: "Indumentaria Ombú",
+    description: "Plantillas ergonómicas de poliuretano flexible con cámaras de evaporación que reducen la transpiración y fatiga.",
+    talles: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48"],
+    colores: [
+      { name: "Gris/Negro", code: "#404040" }
+    ],
+    features: [
+      "Confeccionada en Poliuretano inyectado de alta flexibilidad.",
+      "Cámaras que disminuyen temperatura y humedad interna."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Largo del pie", "Talle", "Largo del pie"],
+      rows: [
+        ["35", "23,1 cm", "42", "28 cm"],
+        ["36", "23,8 cm", "43", "28,7 cm"],
+        ["37", "24,4 cm", "44", "29,4 cm"],
+        ["38", "25,2 cm", "45", "30,1 cm"],
+        ["39", "25,9 cm", "46", "30,8 cm"],
+        ["40", "26,6 cm", "47", "31,5 cm"],
+        ["41", "27,3 cm", "48", "32,2 cm"]
+      ]
+    }
+  },
+
+  // --- CALZADO OMBÚ ---
+  {
+    id: "58002",
+    name: "Botín Ozono Cuero Flúor (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Botín de seguridad Ozono con cuero flor y detalles reflectantes de alta visibilidad. Incorpora puntera de acero reglamentaria y suela dieléctrica.",
+    talles: ["38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
+    colores: [
+      { name: "Cuero Negro / Flúor", code: "#39ff14" }
+    ],
+    features: [
+      "Puntera de acero resistente al impacto.",
+      "Cinta reflectiva gris de alta visibilidad en lateral.",
+      "Planta de poliuretano bidensidad dieléctrica e hidrocarburo resistente.",
+      "Tratamiento antimicótico Sanitec."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Largo del pie sugerido"],
+      rows: [
+        ["38", "25,2 cm"],
+        ["39", "25,9 cm"],
+        ["40", "26,6 cm"],
+        ["41", "27,3 cm"],
+        ["42", "28 cm"],
+        ["43", "28,7 cm"],
+        ["44", "29,4 cm"],
+        ["45", "30,1 cm"],
+        ["46", "30,8 cm"],
+        ["47", "31,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "58030",
+    name: "Botín Ozono Cuero Flor (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Botín clásico de seguridad industrial. Fabricado en cuero flor con refuerzo de cordura y suela autolimpiante.",
+    talles: ["38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
+    colores: [
+      { name: "Cuero Flor Negro", code: "#202020" }
+    ],
+    features: [
+      "Cuero Flor con apliques de CORDURA de máxima durabilidad.",
+      "Puntera de acero y suela dieléctrica.",
+      "Planta autolimpiante con absorción de impactos (Shock Absorber)."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Largo del pie sugerido"],
+      rows: [
+        ["38", "25,2 cm"],
+        ["39", "25,9 cm"],
+        ["40", "26,6 cm"],
+        ["41", "27,3 cm"],
+        ["42", "28 cm"],
+        ["43", "28,7 cm"],
+        ["44", "29,4 cm"],
+        ["45", "30,1 cm"],
+        ["46", "30,8 cm"],
+        ["47", "31,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "58015",
+    name: "Botín CAS Boro Cuero Box (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Botín línea CAS Boro en cuero vacuno box de primera calidad. Durabilidad extrema con suela antideslizante.",
+    talles: ["38", "39", "40", "41", "42", "43", "44", "45", "46"],
+    colores: [
+      { name: "Negro Box", code: "#151515" }
+    ],
+    features: [
+      "Cuero Vacuno Box de alta selección.",
+      "Talonera reforzada CAS y ojalillos metálicos de alta calidad.",
+      "Puntera de acero homologada y suela antideslizante."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58034",
+    name: "Botín Sneaker Composite",
+    category: "Calzado Ombú",
+    description: "Híbrido entre zapatilla y botín de seguridad. Incorpora puntera de Composite (libre de metal, ultra liviana) y suela tridensidad.",
+    talles: ["38", "39", "40", "41", "42", "43", "44", "45", "46"],
+    colores: [
+      { name: "Gris/Negro", code: "#4f4f4f" }
+    ],
+    features: [
+      "Puntera de Composite (no detectable por metales, no transmite calor).",
+      "Suela tridensidad inyectada con plantilla confort.",
+      "Tejido altamente transpirable combinado con cuero flor."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58001",
+    name: "Botín Cuero Box Pisfer (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Botín económico de alta calidad constructiva. Cuero Box Pisfer con suela de poliuretano inyectado resistente a hidrocarburos.",
+    talles: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
+    colores: [
+      { name: "Negro Pisfer", code: "#181818" }
+    ],
+    features: [
+      "Cuero Box Pisfer seleccionado.",
+      "Puntera de acero templado.",
+      "Pasacordón de ojalillo metálico robusto."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58045-13",
+    name: "Botas Sneaker Pro Composite (Waterproof)",
+    category: "Calzado Ombú",
+    description: "Botitas de seguridad premium con tecnología impermeable. Capellada de cuero Nobuk waterproof y puntera Composite.",
+    talles: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
+    colores: [
+      { name: "Marrón Nobuk", code: "#5c4033" }
+    ],
+    features: [
+      "Cuero Nobuk de primera calidad con tratamiento impermeable.",
+      "Puntera de Composite y plantilla de PU bidensidad inyectada.",
+      "Suela exterior compacta para máxima durabilidad y antideslizamiento."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58035",
+    name: "Zapato Gema Dama (Punt. Composite)",
+    category: "Calzado Ombú",
+    description: "Zapato de seguridad diseñado especialmente para horma femenina. Fabricado en cuero Nobuk suave con puntera composite liviana.",
+    talles: ["38", "39", "40", "41"],
+    colores: [
+      { name: "Negro/Gema", code: "#282c34" }
+    ],
+    features: [
+      "Capellada de cuero Nobuk con textil de alta tenacidad.",
+      "Suela bidensidad dieléctrica y puntera de Composite.",
+      "Absorción de impacto en talón y diseño ergonómico."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58032",
+    name: "Zapato Ozono Cuero Flor (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Zapato bajo de seguridad industrial. Cuero flor con apliques de Cordura y cinta reflectiva gris.",
+    talles: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
+    colores: [
+      { name: "Negro", code: "#222222" }
+    ],
+    features: [
+      "Pasa cordón plástico de alta resistencia (no conductivo).",
+      "Puntera de acero y suela tridensidad.",
+      "Plantilla confort incorporada de fábrica."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58040-13",
+    name: "Zapatilla Krypton Reflex (Punt. Acero)",
+    category: "Calzado Ombú",
+    description: "Zapatilla de seguridad con tejido de malla doble densidad transpirable. Look moderno y deportivo sin perder protección.",
+    talles: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+    colores: [
+      { name: "Gris/Negro Reflex", code: "#7f8c8d" }
+    ],
+    features: [
+      "Tejido de malla doble densidad con tratamiento antibacteriano.",
+      "Puntera de acero y suela dieléctrica bidensidad.",
+      "Detalles reflectivos laterales de alta visibilidad."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "58037",
+    name: "Bota Industrial de Goma (Caña Larga)",
+    category: "Calzado Ombú",
+    description: "Bota de PVC impermeable caña larga con puntera de acero. Diseñada para industrias alimenticias, lavado o tareas rurales.",
+    talles: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+    colores: [
+      { name: "Negro Industrial", code: "#111111" }
+    ],
+    features: [
+      "Protección maleolar y refuerzo en empeine.",
+      "Suela bicolor de PVC con canales de drenaje autolimpiantes.",
+      "Línea de corte superior para regulación de la altura de la caña."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Largo del pie", "Largo de bota"],
+      rows: [
+        ["35", "22,4 cm", "33 cm"],
+        ["36", "23 cm", "33,3 cm"],
+        ["37", "23,5 cm", "33,9 cm"],
+        ["38", "24 cm", "34,6 cm"],
+        ["39", "24,5 cm", "35,1 cm"],
+        ["40", "25 cm", "35,5 cm"],
+        ["41", "26 cm", "35,9 cm"],
+        ["42", "26,5 cm", "36,4 cm"],
+        ["43", "27 cm", "36,8 cm"],
+        ["44", "28 cm", "37,1 cm"],
+        ["45", "28,5 cm", "37,3 cm"],
+        ["46", "29,4 cm", "38 cm"]
+      ]
+    }
+  },
+
+  // --- INDUMENTARIA SNIPE ---
+  {
+    id: "25405",
+    name: "Buzo Polar Medio Cierre Snipe",
+    category: "Indumentaria Snipe",
+    description: "Buzo de abrigo polar con medio cierre. Ligero, térmico y con tratamiento anti-peeling para mayor duración.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" }
+    ],
+    features: [
+      "Cuello alto protector contra el viento.",
+      "Cierre de plástico de primera calidad.",
+      "Dos bolsillos laterales."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "55 cm", "57 cm", "61 cm", "65 cm", "68 cm", "71 cm", "74 cm"],
+        ["Largo (B)", "66 cm", "70 cm", "72 cm", "74 cm", "76 cm", "78 cm", "80 cm"],
+        ["Hombros (C)", "46 cm", "48 cm", "50 cm", "52 cm", "54 cm", "56 cm", "58 cm"],
+        ["Manga (D)", "65 cm", "65 cm", "66 cm", "66 cm", "67 cm", "67 cm", "68 cm"]
+      ]
+    }
+  },
+  {
+    id: "25406",
+    name: "Chaleco Polar Snipe",
+    category: "Indumentaria Snipe",
+    description: "Chaleco polar térmico y repelente a la humedad. Tratamiento anti-peeling, ideal para usar sobre camisas.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Material térmico hidrófobo de alta retención de calor.",
+      "Cuello alto y cierre plástico frontal completo.",
+      "Dos bolsillos laterales cómodos."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "55 cm", "57 cm", "61 cm", "65 cm", "68 cm", "71 cm", "74 cm"],
+        ["Largo (B)", "66 cm", "70 cm", "72 cm", "74 cm", "76 cm", "78 cm", "80 cm"],
+        ["Hombros (C)", "46 cm", "48 cm", "50 cm", "52 cm", "54 cm", "56 cm", "58 cm"]
+      ]
+    }
+  },
+  {
+    id: "25407",
+    name: "Campera Polar Completa Snipe",
+    category: "Indumentaria Snipe",
+    description: "Campera polar completa con cierre completo. Excelente aislamiento térmico e hidrófoba.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Cierre completo central de alta calidad.",
+      "Bolsillos laterales con costuras reforzadas.",
+      "Tratamiento anti-peeling en ambas caras."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "55 cm", "57 cm", "61 cm", "65 cm", "68 cm", "71 cm", "74 cm"],
+        ["Largo (B)", "66 cm", "70 cm", "72 cm", "74 cm", "76 cm", "78 cm", "80 cm"],
+        ["Hombros (C)", "46 cm", "48 cm", "50 cm", "52 cm", "54 cm", "56 cm", "58 cm"],
+        ["Manga (D)", "65 cm", "65 cm", "66 cm", "66 cm", "67 cm", "67 cm", "68 cm"]
+      ]
+    }
+  },
+  {
+    id: "26490",
+    name: "Chomba Lisa de Piqué Snipe",
+    category: "Indumentaria Snipe",
+    description: "Chomba polo clásica de piqué de algodón. Transpirable, absorbente y de rápido secado.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Tejido transpirable de alta durabilidad.",
+      "Cartera con dos botones al tono.",
+      "Excelente estabilidad dimensional tras los lavados."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "52 cm", "56 cm", "59 cm", "61 cm", "64 cm", "67 cm", "70 cm"],
+        ["Largo (B)", "72 cm", "74 cm", "76 cm", "77 cm", "79 cm", "81 cm", "83 cm"],
+        ["Hombros (C)", "42 cm", "46 cm", "47 cm", "48 cm", "50 cm", "54 cm", "57 cm"],
+        ["Manga (D)", "21 cm", "24 cm", "25 cm", "25 cm", "26 cm", "27 cm", "28 cm"]
+      ]
+    }
+  },
+  {
+    id: "26266",
+    name: "Chomba Piqué Mujer Snipe",
+    category: "Indumentaria Snipe",
+    description: "Chomba clásica de piqué con moldería entallada para mujer. Tejido transpirable de secado rápido.",
+    talles: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Blanco", code: "#ffffff" }
+    ],
+    features: [
+      "Corte entallado femenino.",
+      "Tejido piqué transpirable.",
+      "Cartera frontal con dos botones."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Ancho Sisa (A)", "43 cm", "45 cm", "46 cm", "49 cm", "51 cm", "53 cm", "55,5 cm"],
+        ["Largo (B)", "61 cm", "63 cm", "66 cm", "67 cm", "68 cm", "72,5 cm", "74 cm"],
+        ["Hombros (D)", "34 cm", "36 cm", "38 cm", "40 cm", "41 cm", "44 cm", "48 cm"],
+        ["Manga (E)", "22 cm", "23 cm", "23 cm", "24 cm", "24 cm", "26,5 cm", "28,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "27402",
+    name: "Remera Básica de Algodón Snipe",
+    category: "Indumentaria Snipe",
+    description: "Remera básica de cuello redondo. Tejida con algodón peinado de primera calidad para mayor durabilidad y suavidad.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Blanco", code: "#ffffff" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Algodón peinado con elasticidad natural.",
+      "Cuello redondo con ribb de refuerzo.",
+      "Ideal para estampados corporativos o bordados."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "50 cm", "53 cm", "56 cm", "59 cm", "62 cm", "66 cm", "69 cm"],
+        ["Largo (B)", "69 cm", "71 cm", "73 cm", "75 cm", "79 cm", "82 cm", "85 cm"],
+        ["Hombros (D)", "44 cm", "47 cm", "48 cm", "50 cm", "52 cm", "55 cm", "57 cm"],
+        ["Manga (E)", "18 cm", "19 cm", "19 cm", "20 cm", "22 cm", "23 cm", "24 cm"]
+      ]
+    }
+  },
+  {
+    id: "30602",
+    name: "Jean Clásico Rígido Snipe",
+    category: "Indumentaria Snipe",
+    description: "Pantalón de jean clásico de trabajo de 14.5 oz. 100% Algodón, corte recto y costuras reforzadas.",
+    talles: ["40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Super Stone", code: "#4682b4" }
+    ],
+    features: [
+      "Denim extra grueso de 14.5 Oz.",
+      "Calce recto clásico de trabajo.",
+      "Cinco bolsillos tradicionales con remaches metálicos."
+    ],
+    sizeGuide: {
+      headers: ["Talle", "Cintura (A)", "Largo Total (B)", "Tiro Del. (C)", "Largo Entrep. (F)"],
+      rows: [
+        ["40", "38 cm", "109 cm", "28 cm", "84 cm"],
+        ["42", "40 cm", "109 cm", "28 cm", "84 cm"],
+        ["44", "42 cm", "110 cm", "29 cm", "84 cm"],
+        ["46", "44 cm", "110 cm", "29 cm", "84 cm"],
+        ["48", "46 cm", "111 cm", "30 cm", "84 cm"],
+        ["50", "48 cm", "111 cm", "30 cm", "84,5 cm"],
+        ["52", "50 cm", "112 cm", "31 cm", "84,5 cm"],
+        ["54", "52 cm", "112 cm", "31 cm", "84,5 cm"]
+      ]
+    }
+  },
+  {
+    id: "30605",
+    name: "Pantalón Cargo Snipe (Hombre)",
+    category: "Indumentaria Snipe",
+    description: "Pantalón cargo de gabardina 100% algodón. Cuenta con bolsillos laterales de gran capacidad.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "100% Algodón ultra resistente.",
+      "Bolsillos cargo laterales con solapa.",
+      "Botón metálico y cremallera de alta resistencia."
+    ],
+    sizeGuide: {
+      headers: ["Medida", "38", "40", "42", "44", "46", "48", "50", "52"],
+      rows: [
+        ["Cintura (A)", "40", "41", "42", "43", "45,5", "48", "49", "52,5"],
+        ["Largo (B)", "108", "108", "109", "110", "110", "110", "111", "111"],
+        ["Botamanga (E)", "20", "20", "20", "21", "21,5", "22,5", "22,5", "23"]
+      ]
+    }
+  },
+  {
+    id: "30606",
+    name: "Pantalón Cargo Snipe (Mujer)",
+    category: "Indumentaria Snipe",
+    description: "Pantalón cargo de gabardina 100% algodón con diseño y entalle para mujer.",
+    talles: ["36", "38", "40", "42", "44", "46", "48", "50", "52"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Beige", code: "#d2b48c" }
+    ],
+    features: [
+      "Moldería femenina entallada.",
+      "Bolsillos cargo laterales estéticos.",
+      "Botón metálico de alta resistencia."
+    ],
+    sizeGuide: {
+      headers: ["Medida", "36", "38", "40", "42", "44", "46", "48", "50"],
+      rows: [
+        ["Cintura (A)", "37", "39", "41", "43", "45", "47", "49", "51"],
+        ["Largo (B)", "105", "106", "107", "108", "109", "110", "111", "112"],
+        ["Botamanga (E)", "20", "21", "22", "22", "23", "23", "24", "24,5"]
+      ]
+    }
+  },
+  {
+    id: "30611",
+    name: "Pantalón Cargo Elastizado 9oz",
+    category: "Indumentaria Snipe",
+    description: "Pantalón cargo con un plus de confort. Tela elastizada de 9 Oz con refuerzo en la entrepierna para trabajos exigentes.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Beige", code: "#d2b48c" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Tejido elastizado súper confortable.",
+      "Refuerzo doble en la costura de la entrepierna.",
+      "Bolsillos cargo y traseros reforzados."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "30610",
+    name: "Bermuda Cargo Elastizada 9oz",
+    category: "Indumentaria Snipe",
+    description: "Bermuda cargo de gabardina elastizada de 9 Oz. Frescura, resistencia y comodidad para climas cálidos.",
+    talles: ["38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Negro", code: "#101010" },
+      { name: "Beige", code: "#d2b48c" },
+      { name: "Gris Topo", code: "#464646" }
+    ],
+    features: [
+      "Bolsillos cargo con cierre velcro.",
+      "Refuerzo doble en la entrepierna.",
+      "Bragueta con cremallera y pasacintos reforzados."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "51033",
+    name: "Campera Trucker Snipe (Térmica/Impermeable)",
+    category: "Indumentaria Snipe",
+    description: "Campera de trabajo de alta gama para climas muy fríos o lluviosos. Tejido exterior impermeable y forrería de matelassé térmico.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Tejido Trucker altamente impermeable y resistente a la abrasión.",
+      "Capucha desmontable con cierre.",
+      "Bolsillos internos porta-documentos.",
+      "Puños elastizados anti-viento."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "63 cm", "65 cm", "67 cm", "69 cm", "71 cm", "72 cm", "74 cm"],
+        ["Largo (B)", "69 cm", "70 cm", "73 cm", "75 cm", "76 cm", "77 cm", "78 cm"],
+        ["Hombros (D)", "54 cm", "55 cm", "59 cm", "61 cm", "61 cm", "63 cm", "65 cm"],
+        ["Manga (E)", "62 cm", "63 cm", "65 cm", "67 cm", "68 cm", "70 cm", "71 cm"]
+      ]
+    }
+  },
+  {
+    id: "51030-10",
+    name: "Campera Trucker Liviana",
+    category: "Indumentaria Snipe",
+    description: "Campera de abrigo liviana pero resistente al agua y frío moderado. Composición 100% poliéster.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Diseño combinado Trucker y Matelassé.",
+      "Ruedo ajustable y puño elastizado en mangas.",
+      "Capucha desmontable muy cómoda."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      rows: [
+        ["Ancho Sisa (A)", "60 cm", "63 cm", "67 cm", "70 cm", "73 cm", "75 cm", "78 cm"],
+        ["Largo (B)", "71 cm", "72 cm", "73 cm", "75 cm", "77 cm", "79 cm", "80 cm"],
+        ["Hombros (D)", "51 cm", "54 cm", "56 cm", "59 cm", "61 cm", "63 cm", "65 cm"],
+        ["Manga (E)", "63 cm", "66 cm", "67 cm", "68 cm", "68 cm", "70 cm", "70 cm"]
+      ]
+    }
+  },
+  {
+    id: "63002-10",
+    name: "Guardapolvo Clásico",
+    category: "Indumentaria Snipe",
+    description: "Guardapolvo clásico unisex. Cuello con solapa, mangas largas y snaps metálicos inoxidables.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" },
+      { name: "Blanco", code: "#ffffff" }
+    ],
+    features: [
+      "Acceso frontal rápido con snaps metálicos.",
+      "Tres bolsillos plaque externos (uno en el pecho).",
+      "Martingala fija en la espalda."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Ancho Sisa (A)", "58 cm", "59 cm", "62 cm", "63 cm", "64 cm", "68 cm"],
+        ["Largo (B)", "99 cm", "100 cm", "104 cm", "105 cm", "109 cm", "110 cm"],
+        ["Hombros (C)", "45 cm", "46 cm", "48 cm", "50 cm", "51 cm", "55 cm"],
+        ["Manga (D)", "64,5 cm", "65 cm", "66 cm", "67 cm", "68 cm", "69 cm"]
+      ]
+    }
+  },
+  {
+    id: "30800-10",
+    name: "Sweater Escote V Jersey",
+    category: "Indumentaria Snipe",
+    description: "Sweater corporativo con escote en V tejido en punto Jersey. Mezcla de algodón y acrílico para suavidad y durabilidad.",
+    talles: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Composición equilibrada: 50% Algodón, 50% Acrílico.",
+      "Cuello, puños y cintura elastizados.",
+      "Tejido en Jersey fino de aspecto refinado."
+    ],
+    sizeGuide: {
+      headers: ["Medida", "XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Pecho (1/2)", "54 cm", "56 cm", "58 cm", "60 cm", "62 cm", "64 cm", "66 cm"],
+        ["Largo frente", "70 cm", "70 cm", "71 cm", "72 cm", "72 cm", "73 cm", "73 cm"],
+        ["Manga", "66 cm", "66 cm", "66 cm", "67 cm", "67 cm", "67 cm", "68 cm"]
+      ]
+    }
+  },
+  {
+    id: "55031",
+    name: "Mameluco Reflectivo de Trabajo",
+    category: "Indumentaria Snipe",
+    description: "Mameluco enterizo de seguridad. Cuenta con cintas reflectivas gris plata en mangas y piernas, ideal para mecánicos y talleres.",
+    talles: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colores: [
+      { name: "Azul Marino", code: "#1a2c4e" }
+    ],
+    features: [
+      "Cuello volcado tipo camisa y puños elastizados.",
+      "Cremallera frontal completa con solapa protectora.",
+      "Múltiples bolsillos (pecho, costados y traseros) con tapa."
+    ],
+    sizeGuide: {
+      headers: ["Medida de Prenda", "S", "M", "L", "XL", "2XL", "3XL"],
+      rows: [
+        ["Hombros (A)", "39 cm", "41 cm", "43 cm", "45 cm", "47 cm", "49 cm"],
+        ["Sisas (B)", "60 cm", "62 cm", "64 cm", "66 cm", "68 cm", "70 cm"],
+        ["Manga (C)", "58 cm", "60 cm", "62 cm", "64 cm", "66 cm", "68 cm"],
+        ["Largo Total (D)", "158 cm", "161 cm", "164 cm", "167 cm", "171 cm", "174 cm"],
+        ["Entrepierna (G)", "79 cm", "80 cm", "81 cm", "82 cm", "83 cm", "84 cm"]
+      ]
+    }
+  },
+  {
+    id: "88105",
+    name: "Guante Moteado Antideslizante",
+    category: "Indumentaria Snipe",
+    description: "Guante moteado tejido sin costuras con hilado de algodón y poliéster. Palma con puntos de PVC antideslizantes.",
+    talles: ["Talle Único"],
+    colores: [
+      { name: "Crudo", code: "#f5f5dc" }
+    ],
+    features: [
+      "Puntos de PVC de alta adherencia en palma.",
+      "Tejido sin costuras internas para evitar roces y ampollas.",
+      "Excelente ventilación que previene la transpiración."
+    ],
+    sizeGuide: null
+  },
+  {
+    id: "88106",
+    name: "Guante Vaqueta de Cuero",
+    category: "Indumentaria Snipe",
+    description: "Guante de cuero vaqueta amarilla de alta flexibilidad. Excelente nivel de desteridad para manipulación de piezas y herramientas.",
+    talles: ["Talle Único"],
+    colores: [
+      { name: "Amarillo", code: "#ffd700" }
+    ],
+    features: [
+      "Cuero vaqueta seleccionado altamente suave y resistente.",
+      "Puño elástico amplio para fácil postura y ventilación.",
+      "Resistencia moderada a aceites y grasas."
+    ],
+    sizeGuide: null
+  }
+];
+
+// Exportación para navegadores
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { STORE_CONFIG, PRODUCT_CATALOG };
+} else {
+  window.STORE_CONFIG = STORE_CONFIG;
+  window.PRODUCT_CATALOG = PRODUCT_CATALOG;
+}

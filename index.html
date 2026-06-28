@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ombú Argentina - Ropa de Trabajo y Calzado de Seguridad</title>
+  <meta name="description" content="Catálogo interactivo de indumentaria de trabajo y calzado de seguridad marca Ombú y Snipe. Armá tu pedido y envíalo directamente por WhatsApp.">
+  
+  <!-- Google Fonts - Outfit para tipografía moderna y profesional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos del Sitio -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG Sprite de Iconos para no depender de librerías externas lentas -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- Icono de Búsqueda -->
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </symbol>
+    <!-- Icono de Carrito -->
+    <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </symbol>
+    <!-- Icono de WhatsApp -->
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.437.002 9.861-4.416 9.863-9.864.001-2.639-1.03-5.12-2.906-6.999C16.353 1.862 13.882 1.03 11.996 1.03c-5.438 0-9.863 4.414-9.865 9.863-.002 1.782.47 3.514 1.37 5.048l-1.016 3.71 3.822-.997c1.5.82 3.07 1.25 4.74 1.25zM17.47 15.39c-.29-.145-1.705-.84-1.97-.935-.26-.095-.45-.145-.64.145-.19.29-.74.935-.905 1.13-.17.19-.33.21-.62.07-2.956-1.47-4.14-2.22-5.424-4.43-.16-.27-.05-.42.09-.56.12-.13.29-.33.43-.49.14-.17.189-.29.28-.48.09-.19.04-.36-.02-.49-.06-.13-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.16-.01-.35-.01-.54-.01-.19 0-.51.07-.78.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.705-.7 1.95-1.37.24-.68.24-1.27.17-1.37-.08-.11-.26-.16-.56-.3z"/>
+    </symbol>
+    <!-- Icono de Cerrar -->
+    <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+    </symbol>
+    <!-- Icono de Info / Medidas -->
+    <symbol id="icon-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="20" height="10" rx="2" ry="2"></rect>
+      <line x1="6" y1="7" x2="6" y2="12"></line><line x1="10" y1="7" x2="10" y2="12"></line>
+      <line x1="14" y1="7" x2="14" y2="12"></line><line x1="18" y1="7" x2="18" y2="12"></line>
+      <line x1="22" y1="7" x2="22" y2="12"></line><line x1="2" y1="7" x2="2" y2="12"></line>
+    </symbol>
+    <!-- Icono de Filtro -->
+    <symbol id="icon-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+    </symbol>
+    <!-- Icono de Basura / Borrar -->
+    <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+    </symbol>
+  </svg>
+
+  <!-- Banner Superior / Avisos -->
+  <div class="top-announcement">
+    <p>🚚 Envíos a todo el país y venta al por mayor / menor. ¡Elegí tus talles y hacé tu pedido por WhatsApp!</p>
+  </div>
+
+  <!-- Cabecera de la Aplicación -->
+  <header class="app-header">
+    <div class="header-container container">
+      <!-- Logo y Branding -->
+      <div class="branding">
+        <span class="brand-tag">RESELLER OFICIAL</span>
+        <h1 id="store-title">Ombú Ropa de Trabajo</h1>
+      </div>
+      
+      <!-- Buscador principal -->
+      <div class="header-search">
+        <div class="search-wrapper">
+          <svg class="icon"><use href="#icon-search"></use></svg>
+          <input type="text" id="search-input" placeholder="Buscar por artículo (ej. 55000), nombre, palabra clave...">
+          <button id="search-clear-btn" class="search-clear-btn" aria-label="Limpiar búsqueda">&times;</button>
+        </div>
+      </div>
+      
+      <!-- Controles del Carrito -->
+      <button id="cart-toggle" class="cart-trigger-btn" aria-label="Abrir carrito">
+        <div class="cart-icon-wrapper">
+          <svg class="icon"><use href="#icon-cart"></use></svg>
+          <span id="cart-count-badge" class="badge">0</span>
+        </div>
+        <span class="cart-btn-text">Mi Pedido</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Cuerpo Principal -->
+  <main class="main-content container">
+    <!-- Navegación de Categorías (Tabs) -->
+    <nav class="category-navigation">
+      <div class="category-tabs-container" id="category-tabs">
+        <button class="tab-btn active" data-category="all">Todos los Productos</button>
+        <button class="tab-btn" data-category="Indumentaria Ombú">Indumentaria Ombú</button>
+        <button class="tab-btn" data-category="Calzado Ombú">Calzado Ombú</button>
+        <button class="tab-btn" data-category="Indumentaria Snipe">Indumentaria Snipe</button>
+      </div>
+    </nav>
+
+    <!-- Indicador de Resultados / Filtros Activos -->
+    <div class="filter-results-bar" id="filter-results-bar" style="display: none;">
+      <p id="filter-results-text">Mostrando resultados...</p>
+      <button id="reset-filters-btn" class="text-btn">Restablecer filtros</button>
+    </div>
+
+    <!-- Grid del Catálogo de Productos -->
+    <section class="catalog-section">
+      <div id="product-grid" class="products-grid">
+        <!-- Renderizado dinámico por app.js -->
+        <div class="loading-spinner">Cargando catálogo premium de Ombú...</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Detalle de Producto -->
+  <div id="product-detail-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-detail-modal" aria-label="Cerrar detalles">
+        <svg class="icon"><use href="#icon-close"></use></svg>
+      </button>
+      
+      <div class="modal-body-layout">
+        <!-- Izquierda: Visualización de variantes / Imagen representativa -->
+        <div class="product-visual-panel">
+          <div class="product-illustration" id="modal-product-illustration">
+            <!-- Renderizado dinámico del gráfico vectorial según el tipo de producto -->
+          </div>
+          <span class="product-art-code" id="modal-product-art">ART. 55000</span>
+        </div>
+        
+        <!-- Derecha: Opciones y Detalles -->
+        <div class="product-info-panel">
+          <span class="product-category-tag" id="modal-product-category">Indumentaria Ombú</span>
+          <h2 class="product-detail-title" id="modal-product-name">Pantalón Ombú Clásico</h2>
+          <p class="product-detail-desc" id="modal-product-desc">Descripción detallada del producto.</p>
+          
+          <div class="product-features-box">
+            <h4>Características destacadas:</h4>
+            <ul id="modal-product-features">
+              <!-- Cargado dinámicamente -->
+            </ul>
+          </div>
+          
+          <hr class="divider">
+          
+          <!-- Selectores del Comprador -->
+          <div class="purchase-selectors">
+            <!-- Selector de Variante / Color (Si aplica) -->
+            <div class="selector-group" id="color-selector-wrapper">
+              <label class="selector-label">Color disponible:</label>
+              <div class="color-options-grid" id="modal-color-options">
+                <!-- Cargado dinámicamente -->
+              </div>
+              <span id="selected-color-name" class="selected-helper-text">Selecciona un color</span>
+            </div>
+            
+            <!-- Selector de Talle con botón de Guía de Talles -->
+            <div class="selector-group">
+              <div class="label-with-action">
+                <label class="selector-label">Talle:</label>
+                <button id="modal-size-guide-trigger" class="text-btn size-guide-btn">
+                  <svg class="icon-inline"><use href="#icon-ruler"></use></svg> Guía de Talles y Medidas
+                </button>
+              </div>
+              <div class="size-options-grid" id="modal-size-options">
+                <!-- Cargado dinámicamente -->
+              </div>
+            </div>
+
+            <!-- Selector de Cantidad -->
+            <div class="selector-group">
+              <label class="selector-label" for="modal-quantity">Cantidad:</label>
+              <div class="quantity-picker">
+                <button type="button" class="qty-btn" id="qty-minus">-</button>
+                <input type="number" id="modal-quantity" value="1" min="1" max="99" readonly>
+                <button type="button" class="qty-btn" id="qty-plus">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <button id="add-to-cart-action-btn" class="btn btn-primary btn-block">
+            <svg class="icon-btn"><use href="#icon-cart"></use></svg> Agregar al Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Guía de Talles Dinámica -->
+  <div id="size-guide-modal" class="modal-overlay size-guide-overlay" aria-hidden="true">
+    <div class="modal-card size-guide-card">
+      <button class="modal-close-btn" id="close-size-modal" aria-label="Cerrar guía de talles">
+        <svg class="icon"><use href="#icon-close"></use></svg>
+      </button>
+      
+      <div class="size-guide-header">
+        <svg class="icon-large"><use href="#icon-ruler"></use></svg>
+        <div>
+          <h3>Guía de Talles y Medidas de Prenda</h3>
+          <p id="size-guide-product-name">Artículo 55000</p>
+        </div>
+      </div>
+      
+      <div class="size-guide-body">
+        <p class="size-guide-disclaimer">💡 <strong>Consejo:</strong> Te sugerimos medir una prenda similar que te quede cómoda extendida sobre una mesa y comparar las medidas con la tabla de abajo.</p>
+        
+        <div class="table-scroll-container" id="size-guide-table-container">
+          <!-- Renderizado dinámico de la tabla desde config.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Lateral del Carrito de Pedido -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer-backdrop" id="close-cart-backdrop"></div>
+    <div class="cart-drawer-content">
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <svg class="icon"><use href="#icon-cart"></use></svg>
+          <h3>Tu Pedido</h3>
+          <span class="cart-badge-count" id="cart-drawer-count">0</span>
+        </div>
+        <button class="cart-close-btn" id="close-cart-btn" aria-label="Cerrar pedido">
+          <svg class="icon"><use href="#icon-close"></use></svg>
+        </button>
+      </div>
+      
+      <!-- Listado de Items en Carrito -->
+      <div class="cart-body" id="cart-drawer-body">
+        <div id="cart-items-list" class="cart-items-list">
+          <!-- Dinámico -->
+        </div>
+        
+        <!-- Formulario del Comprador (Requerido para WhatsApp) -->
+        <div class="checkout-form-box" id="checkout-form-container" style="display: none;">
+          <h4>Datos para el pedido</h4>
+          <form id="checkout-form" onsubmit="return false;">
+            <div class="form-group">
+              <label for="client-name">Nombre completo *</label>
+              <input type="text" id="client-name" required placeholder="Ej: Juan Pérez">
+            </div>
+            
+            <div class="form-group">
+              <label for="client-address">Localidad / Dirección de entrega *</label>
+              <input type="text" id="client-address" required placeholder="Ej: Morón, Buenos Aires o Av. Cabildo 1200">
+            </div>
+            
+            <div class="form-group">
+              <label for="client-notes">Notas / Consultas especiales (opcional)</label>
+              <textarea id="client-notes" placeholder="Ej: Necesito factura A, o consultar por stock de otros colores..."></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer del Carrito con Acciones -->
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Items totales:</span>
+          <span id="cart-total-qty" class="bold">0</span>
+        </div>
+        
+        <p class="cart-whatsapp-info">Se armará una plantilla de texto detallada con tu pedido para que la envíes a nuestro WhatsApp en un solo click.</p>
+        
+        <button id="send-whatsapp-btn" class="btn btn-whatsapp btn-block" disabled>
+          <svg class="icon-btn"><use href="#icon-whatsapp"></use></svg> Enviar Pedido por WhatsApp
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Alerta / Notificación emergente flotante -->
+  <div id="toast-notification" class="toast-notification" aria-live="polite">
+    Producto agregado al pedido.
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h4>Ombú Argentina (Reseller)</h4>
+        <p>Distribución y venta directa de indumentaria laboral homologada y calzado de protección.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Enlaces Rápidos</h5>
+        <ul>
+          <li><a href="#" onclick="document.getElementById('search-input').value='55000'; document.getElementById('search-input').dispatchEvent(new Event('input')); return false;">Pantalón Clásico</a></li>
+          <li><a href="#" onclick="document.getElementById('search-input').value='Calzado'; document.getElementById('search-input').dispatchEvent(new Event('input')); return false;">Calzado de Seguridad</a></li>
+          <li><a href="#" onclick="document.getElementById('search-input').value='Snipe'; document.getElementById('search-input').dispatchEvent(new Event('input')); return false;">Indumentaria Snipe</a></li>
+        </ul>
+      </div>
+      <div class="footer-disclaimer">
+        <p>⚠️ <strong>Aviso legal:</strong> Este sitio web es un catálogo digital administrado por un revendedor/distribuidor independiente de productos marca Ombú y Snipe. Las marcas, logotipos e imágenes pertenecen a sus respectivos propietarios registrados.</p>
+        <p class="copy">&copy; 2026. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
