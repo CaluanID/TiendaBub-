@@ -433,6 +433,17 @@ a:hover {
   overflow: hidden;
 }
 
+.product-image-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.product-card:hover .product-image-img {
+  transform: scale(1.05);
+}
+
 /* Ilustraciones Vectoriales CSS para los Productos */
 .vector-illustration {
   width: 100%;

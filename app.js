@@ -269,10 +269,14 @@ document.addEventListener('DOMContentLoaded', () => {
         sizesHTML = `<span class="product-sizes-preview">${sizeText}</span>`;
       }
 
+      const imageHTML = product.image
+        ? `<img src="${product.image}" alt="${product.name}" class="product-image-img">`
+        : getProductSVG(product, defaultColor);
+
       card.innerHTML = `
         <span class="product-card-badge ${badgeClass}">${badgeText}</span>
         <div class="product-image-container">
-          ${getProductSVG(product, defaultColor)}
+          ${imageHTML}
         </div>
         <div class="product-info">
           <span class="product-art">ART. ${product.id}</span>
@@ -390,7 +394,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateModalIllustration() {
     if (selectedProduct) {
       const colorCode = selectedColor ? selectedColor.code : '#005c30';
-      DOM.modalProductIllustration.innerHTML = getProductSVG(selectedProduct, colorCode);
+      DOM.modalProductIllustration.innerHTML = selectedProduct.image
+        ? `<img src="${selectedProduct.image}" alt="${selectedProduct.name}" class="product-image-img">`
+        : getProductSVG(selectedProduct, colorCode);
     }
   }
 
